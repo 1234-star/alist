@@ -18,6 +18,6 @@ RUN apk update && \
     apk add --no-cache bash ca-certificates su-exec tzdata; \
     chmod +x /entrypoint.sh && \
     rm -rf /var/cache/apk/*
-ENV PUID=0 PGID=0 UMASK=022
-EXPOSE 5244 5245
+ENV PUID=0 PGID=0 UMASK=000
+EXPOSE 8080
 CMD [ "/entrypoint.sh" ]
